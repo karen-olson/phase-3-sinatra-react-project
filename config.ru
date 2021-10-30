@@ -12,4 +12,7 @@ end
 use Rack::JSONBodyParser
 
 # Our application
+use MeetingsController
+use StudentsController
+use TeachersController
 run ApplicationController
