@@ -1,3 +1,5 @@
+require 'pry'
+
 class MeetingsController < ApplicationController
     get "/meetings" do 
         meetings = Meeting.all 
@@ -17,7 +19,7 @@ class MeetingsController < ApplicationController
 
       get "/teachers/:id/students/:student_id/meetings" do
         teacher = Teacher.find(params[:id])
-        meetings = teacher.meetings.find_by(student_id: params[:student_id])
+        meetings = teacher.meetings.filter{|meeting| meeting[:student_id] == params[:student_id].to_i}
         meetings.to_json
       end
 
