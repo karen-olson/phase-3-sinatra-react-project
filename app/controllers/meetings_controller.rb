@@ -1,10 +1,6 @@
 require 'pry'
 
 class MeetingsController < ApplicationController
-    get "/meetings" do 
-        meetings = Meeting.all 
-        meetings.to_json
-      end
     
       post "/meetings" do 
         meeting = Meeting.create(params)
