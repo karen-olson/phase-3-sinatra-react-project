@@ -19,5 +19,4 @@ class MeetingsController < ApplicationController
         meetings.to_json
       end
 
-
 end

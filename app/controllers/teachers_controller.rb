@@ -3,4 +3,6 @@ class TeachersController < ApplicationController
         teachers = Teacher.all 
         teachers.to_json
       end
+
+    
 end
